@@ -263,7 +263,7 @@ def on_schedoff_button_overview(update: Update, context: CallbackContext):
     update.callback_query.answer('Scheduled altenrative speed off')
 
 
-updater.add_handler(CommandHandler(['overview', 'ov'], on_overview_command), bot_command=BotCommand("overview", "overview of what we're downloading and uploading"))
+updater.add_handler(CommandHandler(['overview', 'ov'], on_overview_command), bot_command=BotCommand("overview", "显示下载/上传的种子的状态"))
 updater.add_handler(CommandHandler(['quick'], on_overview_command))
 updater.add_handler(MessageHandler(Filters.regex(r'^[aA\.]$'), on_overview_refresh))
 updater.add_handler(CallbackQueryHandler(on_refresh_button_overview, pattern=r'^(?:quick|overview):refresh:(\w+)$'))

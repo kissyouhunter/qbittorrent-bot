@@ -42,5 +42,5 @@ def change_setting(update: Update, context: CallbackContext):
     update.message.reply_html('<b>Setting changed</b>:\n\n<code>{}</code>'.format(val))
 
 
-updater.add_handler(CommandHandler(['settings', 's'], on_settings_command), bot_command=BotCommand("settings", "see qbittorrent's settings list"))
-updater.add_handler(CommandHandler(['set'], change_setting), bot_command=BotCommand("set", "change a qbittorrent setting"))
+updater.add_handler(CommandHandler(['settings', 's'], on_settings_command), bot_command=BotCommand("settings", "显示目前设置列表"))
+updater.add_handler(CommandHandler(['set'], change_setting), bot_command=BotCommand("set", "改变 qbittorrent 设置"))

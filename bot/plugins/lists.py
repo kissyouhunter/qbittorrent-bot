@@ -66,5 +66,5 @@ updater.add_handler(
 )
 updater.add_handler(
     CommandHandler(["available_filters", "af"], on_available_filters_command),
-    bot_command=[BotCommand("available_filters", "show commands to filter the torrents list by status")],
+    bot_command=[BotCommand("available_filters", "显示命令列表（通过不同状态显示种子）")],
 )

@@ -26,4 +26,4 @@ def on_version_command(update: Update, context: CallbackContext):
     update.message.reply_html(text)
 
 
-updater.add_handler(CommandHandler('version', on_version_command), bot_command=BotCommand("version", "see qbittorrent's version"))
+updater.add_handler(CommandHandler('version', on_version_command), bot_command=BotCommand("version", "获取qbittorrent和API的版本"))

@@ -23,4 +23,4 @@ def on_freespace_command(update: Update, context: CallbackContext):
     update.message.reply_html(text)
 
 
-updater.add_handler(CommandHandler(["space", "freespace"], on_freespace_command), bot_command=BotCommand("freespace", "free space from download path"))
+updater.add_handler(CommandHandler(["space", "freespace"], on_freespace_command), bot_command=BotCommand("freespace", "下载路径剩余空间"))
