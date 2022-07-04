@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 
 #subprocess.call(["bash", "./upload.sh"], shell=False)
 
-print('this is a test python script!')
+def move_file_to_cloud(update: Update, context: CallbackContext):
+    print('this is a test python script!')
 
-updater.add_handler(CommandHandler('move', move_file), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
+updater.add_handler(CommandHandler('move', move_file_to_cloud), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
