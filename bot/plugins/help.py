@@ -57,5 +57,5 @@ def on_help(update: Update, context: CallbackContext):
     update.message.reply_html(HELP_MESSAGE)
 
 
-updater.add_handler(CommandHandler('help', on_help), bot_command=BotCommand("help", "show the help message"))
+updater.add_handler(CommandHandler('help', on_help), bot_command=BotCommand("help", "显示帮助信息"))
 updater.add_handler(MessageHandler(Filters.regex(r'^\/start$'), on_help))
