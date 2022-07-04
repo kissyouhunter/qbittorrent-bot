@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 # https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#get-torrent-list
 TORRENTS_CATEGORIES = (
-    '所有种子',
+    'all',
     'downloading',
     'seeding',
     'completed',
