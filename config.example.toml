@@ -1,0 +1,32 @@
+[telegram]
+token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+admins = [1234567]
+workers = 1 # number of python-telegram-bot workers. One worker is more than enough
+timeout = 120 # requests timeout in seconds
+errors_log_chat = 0 # chat where to post exceptions. If disabled (0), the first user id in 'admins' will be used
+
+[proxy]
+url = ""        # socks5(h)://ip:port or http://user:pass@ip:port/
+username = ""   # Socks only, Use url embeded user/pass for http(s)
+password = ""   # Socks only
+
+[notifications]
+completed_torrents = 0 # id of a chat to notify when a torrent is completed. 0 to disable
+no_notification_tag = "" # if a torrent has this tag, do not send the completed download notification in the notifications chat (if set). Case insensitive. "" (empty string) to disable
+added_torrents = 0 # id of a chat to notify when a new torrent is added. 0 to disable
+
+[qbittorrent]
+url = "http://127.0.0.1:8080/"
+# for docker user the url should not be 127.0.0.1 because the container is connected to docker0 network
+# url = "http://172.17.0.1:8080" # docker0 network, the 172.0.0.1 is host ip addr
+login = "admin"
+secret = "adminadmin"
+added_torrents_tag = "telegram bot" # a tag to add to the torrents added through the bot. "" (empty string) to disable
+added_torrents_category = "" # the category to set for torrents added through the bot. "" (empty string) to disable
+altspeed_presets = [
+    # alternative speed buttons (in kb/s) to show when /overview is used. Set this to [] (empty list) to show no altspeed button
+    # [upload, download],
+    [5, 10],
+    [5, 50],
+    [5, 200],
+]
