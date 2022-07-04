@@ -7,6 +7,8 @@ from telegram.ext import CommandHandler, CallbackContext
 
 from bot.updater import updater
 
+logger = logging.getLogger(__name__)
+
 #subprocess.call(["bash", "./upload.sh"], shell=False)
 
 print('this is a test python script!')
