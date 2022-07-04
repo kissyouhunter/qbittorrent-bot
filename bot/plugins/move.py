@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def move_file_to_cloud(update: Update, context: CallbackContext):
     update.message.reply_text('this is a test msg!')
-    subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
+    #ubprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
     #update.subprocess.call(['bash', './move.sh', shell=False])
 
 updater.add_handler(CommandHandler('move', move_file_to_cloud), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
