@@ -9,4 +9,4 @@ from telegram.ext import CommandHandler, CallbackContext
 
 print('this is a test python script!')
 
-updater.add_handler(CommandHandler('move', move_file_to_clould), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
+updater.add_handler(CommandHandler('move', move_file), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
