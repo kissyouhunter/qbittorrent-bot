@@ -1,4 +1,3 @@
-from distutils.file_util import move_file
 import logging
 import subprocess
 
@@ -14,7 +13,7 @@ logger = logging.getLogger(__name__)
 def move_file_to_cloud(update: Update, context: CallbackContext):
     #update.message.reply_text('this is a test msg!')
     
-    subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
+    update.message.reply_test(subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False))
 
     #update.subprocess.call(['bash', './move.sh', shell=False])
 
