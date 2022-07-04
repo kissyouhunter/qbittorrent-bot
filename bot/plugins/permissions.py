@@ -45,5 +45,5 @@ def set_permission(update: Update, context: CallbackContext):
     update.message.reply_html('<b>New config</b>:\n\n<code>{}</code>'.format(str(permissions)))
 
 
-updater.add_handler(CommandHandler(['permissions', 'p'], get_permissions), bot_command=BotCommand("permissions", "see how permissions are configured"))
-updater.add_handler(CommandHandler(['pset'], set_permission), bot_command=BotCommand("pset", "change a permission"))
+updater.add_handler(CommandHandler(['permissions', 'p'], get_permissions), bot_command=BotCommand("permissions", "获取权限设置"))
+updater.add_handler(CommandHandler(['pset'], set_permission), bot_command=BotCommand("pset", "改变权限"))

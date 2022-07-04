@@ -18,9 +18,9 @@ HELP_MESSAGE = """<b>Commands</b>:
 • /available_filters: 显示命令列表（通过不同状态显示种子）
 • /overview: 显示下载/上传的种子的状态
 • /filter or /f <code>[substring]</code>: filter by substring (filters from the full list)
-• /settings or /s: 显示目前设置列表
-• /transferinfo: 显示目前的速度、排队情况和分享率
-• /atm: 显示目前自动种子管理设置
+• /settings or /s: 显示设置列表
+• /transferinfo: 显示目种子速度、排队情况和分享率
+• /atm: 显示自动种子管理设置
 • /atmyes or /atmno: 列出 是/否 在自动种子管理中
 • /json: 输出所有的种子到json文件
 • /version: 获取qbittorrent和API的版本
@@ -42,6 +42,7 @@ HELP_MESSAGE = """<b>Commands</b>:
 
 <i>ADMIN commands</i>
 • /permissions: get the current permissions configuration
+• /permissions: 获取权限设置
 • /pset <code>[key] [val]</code>: change the value of a permission key
 • /freespace: get the current free space from qbittorrent's download drive
 

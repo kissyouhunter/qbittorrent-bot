@@ -46,7 +46,7 @@ def manage_torrent_cb(update: Update, context: CallbackContext):
         reply_markup=torrent.actions_keyboard,
         parse_mode=ParseMode.HTML
     )
-    update.callback_query.answer('Use the keyboard to manage the torrent')
+    update.callback_query.answer('使用键盘管理种子')
 
 
 @u.check_permissions(required_permission=Permissions.READ)
