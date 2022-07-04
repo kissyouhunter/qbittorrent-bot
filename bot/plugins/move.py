@@ -1,6 +1,7 @@
 
 import logging
 import os
+import subprocess
 
 from telegram import Update, BotCommand
 from telegram.ext import CommandHandler, CallbackContext
@@ -18,7 +19,7 @@ def move_file_to_cloud(update: Update, context: CallbackContext):
 
     os.system('/bin/bash -c "bash /app/bot/plugins/move.sh"')
 
-    #subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
+    subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
 
     #update.subprocess.call(['bash', '/app/bot/plugins/move.sh'], shell=False)
 
