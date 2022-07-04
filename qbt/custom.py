@@ -371,4 +371,4 @@ class OfflineClient:
         return internal()
 
     def _raise(self):
-        raise ConnectionError('cannot connect to qbittorrent ({})'.format(config.qbittorrent.url))
+        raise ConnectionError('无法链接到 qbittorrent, 请检查 config 文件 ({})'.format(config.qbittorrent.url))
