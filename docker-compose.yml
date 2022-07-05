@@ -5,6 +5,7 @@ services:
     restart: always
     container_name: qbittorrent
     hostname: qbitorrent
+    network_mode: bridge
     ports:
       - '8989:8989' # web访问端口
       - '6881:6881' # BT下载监听端口
