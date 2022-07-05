@@ -17,7 +17,7 @@ def move_file_to_cloud(update: Update, context: CallbackContext):
     
     file_name = '/app/bot/plugins/move.sh'
 
-    os.system('/bin/bash -c "bash /app/bot/plugins/move.sh"')
+    #os.system('/bin/bash -c "bash /app/bot/plugins/move.sh"')
 
     subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
 
