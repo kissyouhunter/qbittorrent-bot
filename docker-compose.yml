@@ -25,5 +25,5 @@ services:
     container_name: qb-bot
     hostname: qb-bot
     volumes:
-s     - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
-      - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下上面一致
+     - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
+     - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下上面一致
