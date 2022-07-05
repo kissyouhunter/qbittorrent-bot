@@ -14,6 +14,6 @@ def move_file_to_cloud(update: Update, context: CallbackContext):
 
     subprocess.call(["bash", "bot/plugins/move.sh"], shell=False)
 
-    update.message.reply_text('shell脚本执行完毕')
+    update.message.reply_text('文件上传完毕')
 
 updater.add_handler(CommandHandler('move', move_file_to_cloud), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
