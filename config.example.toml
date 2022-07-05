@@ -1,9 +1,13 @@
 [telegram]
-token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
-admins = [1234567]
+token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11" # bot的token
+admins = [1234567] # user的id
 workers = 1 # number of python-telegram-bot workers. One worker is more than enough
 timeout = 120 # requests timeout in seconds
 errors_log_chat = 0 # chat where to post exceptions. If disabled (0), the first user id in 'admins' will be used
+
+[rclone]
+name = "" # Rclone配置时填写的name
+up_path = "" # onedrive网盘上传目录
 
 [proxy]
 url = ""        # socks5(h)://ip:port or http://user:pass@ip:port/
