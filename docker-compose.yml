@@ -17,6 +17,7 @@ services:
       QB_EE_BIN: true # 使用qBittorrent-EE
       QB_WEBUI_PORTE: 8989 # web访问端口环境变量
     volumes:
+      - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
       - ./qbittorrent/config:/config # qBittorrent配置文件位置
       - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下面一致
 
