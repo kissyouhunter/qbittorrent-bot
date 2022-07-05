@@ -7,10 +7,10 @@ from telegram.ext import CommandHandler, CallbackContext
 
 from bot.updater import updater
 
-logger = logging.getLogger(move)
+logger = logging.getLogger(__name__)
 
 def move_file_to_cloud(update: Update, context: CallbackContext):
-    logger.info('executing move shell script')
+    logger.info('executing move shell script', update.message.from_user.first_name)
 
     subprocess.call(["bash", "bot/plugins/move.sh"], shell=False)
 
