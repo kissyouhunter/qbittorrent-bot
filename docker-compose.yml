@@ -24,6 +24,7 @@ services:
     restart: always
     container_name: qb-bot
     hostname: qb-bot
+    network_mode: "host"
     volumes:
      - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
      - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下上面一致
