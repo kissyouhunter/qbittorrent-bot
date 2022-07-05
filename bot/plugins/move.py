@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/app/bot/plugins')
 import logging
 import os
 import subprocess
@@ -22,6 +20,6 @@ def move_file_to_cloud(update: Update, context: CallbackContext):
 
     subprocess.call(["bash", "/app/bot/plugins/move.sh"], shell=False)
 
-    #update.subprocess.call(['bash', '/app/bot/plugins/move.sh'], shell=False)
+    os.uname()
 
 updater.add_handler(CommandHandler('move', move_file_to_cloud), bot_command=BotCommand("move", "移动文件或文件夹到网盘"))
