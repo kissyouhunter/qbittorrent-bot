@@ -45,8 +45,6 @@ tg_push_message2
 
 rclone moveto -v -P ${DL_PATH} ${NAME}:${UP_PATH}
 
-TG_MSG1="rclone 文件上传完毕。"
-
 tg_push_message1
 
 rm -rf ${DL_PATH}/*

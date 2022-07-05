@@ -1,0 +1,29 @@
+version: "3"
+services:
+  qbittorrent:
+    image: 'johngong/qbittorrent:4.4.3.1-4.4.3.12'
+    restart: always
+    container_name: qbittorrent
+    hostname: qbitorrent
+    ports:
+      - '8989:8989' # web访问端口
+      - '6881:6881' # BT下载监听端口
+      - '6881:6881/udp' # BT下载DHT监听端口
+    environment:
+      UMASK: 022
+      UID: 0
+      GID: 0
+      QB_EE_BIND: true # 使用qBittorrent-EE
+      QB_WEBUI_PORTE: 8989 # web访问端口环境变量
+    volumes:
+      - ./qbittorrent/config:/config # qBittorrent配置文件位置
+      - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下面一致
+
+  bot:
+    image: 'bot:latest'
+    restart: always
+    container_name: qb-bot
+    hostname: qb-bot
+    volumes:
+s     - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
+      - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下上面一致
