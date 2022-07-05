@@ -1,4 +1,5 @@
-
+import sys
+sys.path.append('/app/bot/plugins')
 import logging
 import os
 import subprocess
