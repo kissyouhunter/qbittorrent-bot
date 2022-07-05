@@ -13,7 +13,7 @@ services:
       UMASK: 022
       UID: 0
       GID: 0
-      QB_EE_BIND: true # 使用qBittorrent-EE
+      QB_EE_BIN: true # 使用qBittorrent-EE
       QB_WEBUI_PORTE: 8989 # web访问端口环境变量
     volumes:
       - ./qbittorrent/config:/config # qBittorrent配置文件位置
