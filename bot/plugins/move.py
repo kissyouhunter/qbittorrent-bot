@@ -10,8 +10,7 @@ from bot.updater import updater
 logger = logging.getLogger(__name__)
 
 def move_file_to_cloud(update: Update, context: CallbackContext):
-    #subprocess.call(["bash", "./move.sh"], shell=False)
-    os.system('/bin/bash -c "bash /app/bot/plugins/move.sh"')
+    subprocess.call(["bash", "./move.sh"], shell=False)
 
     update.message.reply_text('shell脚本执行完毕')
 
