@@ -8,3 +8,4 @@ config.toml
 permissions.json
 completed.json
 do_not_notify.json
+docker-compose.yml
