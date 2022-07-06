@@ -29,3 +29,4 @@ services:
     volumes:
      - /root/.config/rclone:/root/.config/rclone  # rclone 配置文件路径
      - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下上面一致
+     - ./qbittorrent/bot/config.toml:/app/config.toml # bot 的配置文件
