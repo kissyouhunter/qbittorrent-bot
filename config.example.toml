@@ -20,7 +20,7 @@ no_notification_tag = "" # if a torrent has this tag, do not send the completed 
 added_torrents = 0 # id of a chat to notify when a new torrent is added. 0 to disable
 
 [qbittorrent]
-url = "http://127.0.0.1:8080/"
+url = "http://127.0.0.1:8989/"
 # for docker user the url should not be 127.0.0.1 because the container is connected to docker0 network
 # url = "http://172.17.0.1:8080" # docker0 network, the 172.0.0.1 is host ip addr
 login = "admin"
