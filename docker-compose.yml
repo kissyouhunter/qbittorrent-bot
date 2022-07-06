@@ -22,7 +22,7 @@ services:
       - ./qbittorrent/Downloads:/Downloads # qBittorrent下载位置，需要和下面一致
 
   bot:
-    image: 'kissyouhunter:qb-bot:latest'
+    image: 'kissyouhunter/qb-bot:latest'
     restart: always
     container_name: qb-bot
     hostname: qb-bot
