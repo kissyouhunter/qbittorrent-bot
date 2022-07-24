@@ -30,7 +30,7 @@ def change_alternative_limits(update: Update, context: CallbackContext):
         return
 
     if not context.args:
-        update.message.reply_text("输入命令后需要输入下载速度(kb/s)")
+        update.message.reply_text("输入格式：/altup 50")
         return
 
     preferences_to_edit = dict()
