@@ -18,7 +18,7 @@ def on_filter_command(update: Update, context: CallbackContext):
     logger.info('/filter command used by %s (query: %s)', update.effective_user.first_name, context.args)
 
     if not context.args[0:]:
-        update.message.reply_text('Please provide a search term')
+        update.message.reply_text('请输入检索关键词')
         return
 
     query = ' '.join(context.args[0:])
@@ -26,7 +26,7 @@ def on_filter_command(update: Update, context: CallbackContext):
     torrents = qb.filter(query)
 
     if not torrents:
-        update.message.reply_text('No results for "{}"'.format(query))
+        update.message.reply_text('无结果关于 "{}"'.format(query))
         return
 
     base_string = "• <code>{short_name_escaped}</code> ({progress_pretty}% of {size_pretty}, {share_ratio_rounded}, {state_pretty}) [<a href=\"{info_deeplink}\">info</a>]"
@@ -36,4 +36,4 @@ def on_filter_command(update: Update, context: CallbackContext):
         update.message.reply_html('\n'.join(strings_chunk))
 
 
-updater.add_handler(CommandHandler(['filter', 'f'], on_filter_command), bot_command=BotCommand("filter", "filter torrents by substring"))
+updater.add_handler(CommandHandler(['filter', 'f'], on_filter_command), bot_command=BotCommand("filter", "关键词过滤"))
