@@ -52,6 +52,6 @@ def on_atm_list_command(update: Update, context: CallbackContext):
         update.message.reply_html('\n'.join(strings_chunk))
 
 
-updater.add_handler(CommandHandler(['atm'], on_atm_command), bot_command=BotCommand("atm", "info about auto torrent management"))
-updater.add_handler(CommandHandler(['atmyes'], on_atm_list_command), bot_command=BotCommand("atmyes", "list torrents which have ATM enabled"))
-updater.add_handler(CommandHandler(['atmno'], on_atm_list_command), bot_command=BotCommand("atmno", "list torrents which have ATM disabled"))
+updater.add_handler(CommandHandler(['atm'], on_atm_command), bot_command=BotCommand("atm", "种子自动管理信息"))
+updater.add_handler(CommandHandler(['atmyes'], on_atm_list_command), bot_command=BotCommand("atmyes", "显示开启了自动管理的种子"))
+updater.add_handler(CommandHandler(['atmno'], on_atm_list_command), bot_command=BotCommand("atmno", "显示关闭了自动管理的种子"))
