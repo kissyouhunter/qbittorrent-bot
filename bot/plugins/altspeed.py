@@ -25,12 +25,12 @@ def change_alternative_limits(update: Update, context: CallbackContext):
         logger.info('/altdown: showing alternative download speed limits presets')
 
         reply_markup = kb.alternative_download_limits(PRESETS)
-        update.message.reply_markdown('Select the alternative download speed', reply_markup=reply_markup)
+        update.message.reply_markdown('选择备选下载速度', reply_markup=reply_markup)
 
         return
 
     if not context.args:
-        update.message.reply_text("Speed must be provided after the command (in kb/s)")
+        update.message.reply_text("输入命令后需要输入下载速度(kb/s)")
         return
 
     preferences_to_edit = dict()
@@ -41,7 +41,7 @@ def change_alternative_limits(update: Update, context: CallbackContext):
 
     kbs: str = context.args[0]
     if not kbs.isdigit():
-        update.message.reply_text('Please pass the alternative speed limit in kb/s, as an integer')
+        update.message.reply_text('下载速度上限必须为整数(kb/s)')
         return
 
     preferences_to_edit[preference_key] = int(kbs) * 1014
@@ -72,7 +72,7 @@ def alt_speed_callback(update: Update, context: CallbackContext):
 
 
 updater.add_handler(CommandHandler(['altdown', 'altup'], change_alternative_limits), bot_command=[
-    BotCommand("altdown", "set the alternative download speed"),
-    BotCommand("altup", "set the alternative upload speed"),
+    BotCommand("altdown", "设置备选下载速度"),
+    BotCommand("altup", "设置备选上传速度"),
 ])
 updater.add_handler(CallbackQueryHandler(alt_speed_callback, pattern=r'^altspeed:(\d+):(\d+)$'))
