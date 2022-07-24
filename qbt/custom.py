@@ -15,18 +15,18 @@ logger = logging.getLogger(__name__)
 
 # https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#get-torrent-list
 TORRENTS_CATEGORIES = (
-    'all 所有任务',
-    'downloading 下载中的任务',
-    'seeding 做种中的任务',
-    'completed 已完成的任务',
-    'paused 暂停的任务',
-    'active 有效的任务',
-    'inactive 无效的任务',
-    'resumed 继续的任务',
-    'stalled 暂缓的任务',
-    'stalled_uploading 上传暂缓的任务',
-    'stalled_downloading 下载暂缓的任务',
-    'errored 错误的任务',
+    'all',
+    'downloading',
+    'seeding',
+    'completed',
+    'paused',
+    'active',
+    'inactive',
+    'resumed',
+    'stalled',
+    'stalled_uploading',
+    'stalled_downloading',
+    'errored',
 )
 
 STATES_DICT = {
