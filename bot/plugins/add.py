@@ -67,7 +67,7 @@ def add_from_magnet(update: Update, context: CallbackContext):
     logger.info('torrent hash from regex: %s', torrent_hash)
 
     update.message.reply_html(
-        'Magnet added',
+        '磁力链接已添加',
         reply_markup=kb.short_markup(torrent_hash),
         quote=True
     )
@@ -86,7 +86,8 @@ def add_from_file(update: Update, context: CallbackContext):
                     document.mime_type, document.file_name)
 
         update.message.reply_markdown(
-            'Please send me a valid torrent file (`.torrent` extension or `application/x-bittorrent` mime type)',
+            #'Please send me a valid torrent file (`.torrent` extension or `application/x-bittorrent` mime type)',
+            '请发送有效的种子文件或磁力链接',
             quote=True
         )
         return
@@ -111,7 +112,7 @@ def add_from_file(update: Update, context: CallbackContext):
         qb.download_from_file(f, **kwargs)
 
     update.message.reply_text(
-        'Torrent added',
+        '种子已添加',
         quote=True,
         reply_markup=kb.short_markup(torrent_hash)
     )
@@ -134,7 +135,7 @@ def add_from_url(update: Update, context: CallbackContext):
     # always returns an empty json:
     # https://python-qbittorrent.readthedocs.io/en/latest/modules/api.html#qbittorrent.client.Client.download_from_link
 
-    update.message.reply_text('Torrent url added', quote=True)
+    update.message.reply_text('种子链接已添加', quote=True)
 
     notify_addition(update.effective_chat.id, context.bot, update.effective_user, torrent_url)
 
