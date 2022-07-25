@@ -22,10 +22,10 @@ def change_alternative_limits(update: Update, context: CallbackContext):
     logger.info('/altdown or /altup from %s', update.message.from_user.first_name)
 
     if re.search(r'^[!/]altdown$', update.message.text, re.I):
-        logger.info('/altdown: 显示备选下载速度限制预设')
+        logger.info('/altdown: 显示备用下载速度限制预设')
 
         reply_markup = kb.alternative_download_limits(PRESETS)
-        update.message.reply_markdown('选择备选下载速度', reply_markup=reply_markup)
+        update.message.reply_markdown('选择备用下载速度', reply_markup=reply_markup)
 
         return
 
@@ -72,7 +72,7 @@ def alt_speed_callback(update: Update, context: CallbackContext):
 
 
 updater.add_handler(CommandHandler(['altdown', 'altup'], change_alternative_limits), bot_command=[
-    BotCommand("altdown", "设置备选下载速度"),
-    BotCommand("altup", "设置备选上传速度"),
+    BotCommand("altdown", "设置备用下载速度"),
+    BotCommand("altup", "设置备用上传速度"),
 ])
 updater.add_handler(CallbackQueryHandler(alt_speed_callback, pattern=r'^altspeed:(\d+):(\d+)$'))
