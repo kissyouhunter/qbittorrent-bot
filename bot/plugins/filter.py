@@ -18,7 +18,7 @@ def on_filter_command(update: Update, context: CallbackContext):
     logger.info('/filter command used by %s (query: %s)', update.effective_user.first_name, context.args)
 
     if not context.args[0:]:
-        update.message.reply_text('请输入检索关键词')
+        update.message.reply_text('请输入检索关键词 (/filter xxxx)')
         return
 
     query = ' '.join(context.args[0:])

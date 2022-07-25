@@ -17,7 +17,7 @@ HELP_MESSAGE = """<b>Commands</b>:
 • /start or /help: 显示帮助信息
 • /available_filters: 显示命令列表（通过不同状态显示种子）
 • /overview: 显示下载/上传的种子的状态
-• /filter or /f <code>[substring]</code>: filter by substring (filters from the full list)
+• /filter or /f <code>[substring]</code>: 关键词过滤(所有任务)
 • /settings or /s: 显示设置列表
 • /transferinfo: 显示目种子速度、排队情况和分享率
 • /atm: 显示自动种子管理设置
