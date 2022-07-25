@@ -30,9 +30,9 @@ HELP_MESSAGE = """<b>Commands</b>:
 • magnet url: 添加磁力链接直接添加任务
 
 <i>EDIT commands</i>
-• /altdown: change the alternative max download speed from a keyboard
-• /altdown <code>[kb/s]</code>: change the alternative max download speed
-• /altup <code>[kb/s]</code>: change the alternative max upload speed
+• /altdown: 设置备用下载速度 (/altdown 0)
+• /altdown <code>[kb/s]</code>: 选择备用下载速度
+• /altup <code>[kb/s]</code>: 设置备用上传速度
 • /pauseall: 暂停所有种子
 • /resumeall: 恢复所有种子
 • /set <code>[setting] [new value]</code>: 改变 qbittorrent 设置
@@ -41,13 +41,12 @@ HELP_MESSAGE = """<b>Commands</b>:
 (tags can have white spaces)
 
 <i>ADMIN commands</i>
-• /permissions: get the current permissions configuration
 • /permissions: 获取权限设置
 • /pset <code>[key] [val]</code>: change the value of a permission key
-• /freespace: get the current free space from qbittorrent's download drive
+• /freespace: 获取下载路径剩余空间
 
 <i>FREE commands</i>
-• /rmkb: remove the keyboard, if any"""
+• /rmkb: 移除虚拟按键"""
 
 
 @u.check_permissions(required_permission=Permissions.READ)
