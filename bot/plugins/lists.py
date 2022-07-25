@@ -38,7 +38,7 @@ def on_torrents_list_selection(update: Update, context: CallbackContext):
     logger.info('qbittirrent request returned %d torrents', len(torrents))
 
     if not torrents:
-        update.message.reply_html('There is no torrent to be listed for <i>{}</i>'.format(qbfilter))
+        update.message.reply_html('没有此种子 <i>{}</i>'.format(qbfilter))
         return
 
     if qbfilter == 'completed':
