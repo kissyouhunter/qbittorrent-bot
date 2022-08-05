@@ -19,7 +19,7 @@ def on_resume_all_command(update: Update, context: CallbackContext):
 
     qb.resume_all()
 
-    update.message.reply_text('Resumed all torrents')
+    update.message.reply_text('恢复所有种子任务')
 
 
 @u.check_permissions(required_permission=Permissions.EDIT)
@@ -29,7 +29,7 @@ def on_pause_all_command(update: Update, context: CallbackContext):
 
     qb.pause_all()
 
-    update.message.reply_text('Paused all torrents')
+    update.message.reply_text('暂停所有种子任务')
 
 
 updater.add_handler(CommandHandler(['resumeall'], on_resume_all_command), bot_command=BotCommand("resumeall", "恢复所有种子"))

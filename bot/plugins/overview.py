@@ -47,8 +47,8 @@ def get_quick_info_text(sort_active_by_dl_speed=True):
     active_torrents_down = [torrent for torrent in all_torrents if torrent.state in ("downloading",)]
     active_torrents_down.sort(key=lambda t: t['dlspeed'])
 
-    active_torrents_down_strings_list = ['no active downloading torrents']
-    active_torrents_up_strings_list = ['no active uploading torrents']
+    active_torrents_down_strings_list = ['无下载任务']
+    active_torrents_up_strings_list = ['无上传任务']
     states_count_string = 'none'
     categories_count_string = 'none'
 
