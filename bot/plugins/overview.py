@@ -17,7 +17,7 @@ from utils import Permissions
 
 logger = logging.getLogger(__name__)
 
-QUICK_INFO_TEXT = """• <b>completed:</b> {completed_count}
+QUICK_INFO_TEXT = """• <b>已完成:</b> {completed_count}
 • <b>torrent states:</b> {states_count}
 • <b>categories:</b> {categories_count}
 
