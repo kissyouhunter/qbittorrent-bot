@@ -13,35 +13,35 @@ from utils import kb
 logger = logging.getLogger(__name__)
 
 
-TEXT = """<b>Current speed</b>
+TEXT = """<b>当前速度</b>
 ▲ {current_upload_speed}/s
 ▼ {current_download_speed}/s
 
-<b>Global speed limits</b>
+<b>全局速度限制</b>
 ▲ {global_up_limit}
 ▼ {global_down_limit}
 
-<b>Alternative speed limits</b>
+<b>备用速度限制</b>
 • alt speed: {alt_speed_status}
 ▲ {alt_speed_down}
 ▼ {alt_speed_up}
 
-<b>Data uploaded/downloaded during this session</b>
+<b>上传/下载的总流量</b>
 ▲ {session_total_upload}
 ▼ {session_total_download}
-• this session's share rateo: {session_share_rateo}
+• 分享率: {session_share_rateo}
 
-<b>Torrents queueing</b>
-• max active: {queueing_max_active_downloads} down, {queueing_max_active_uploads} up, \
-{queueing_max_active_torrents} total
-• count slow torrents in these limits? {queueing_count_slow_torrents}
-• slow torrent down threshold: {queueing_slow_torrent_down_threshold} kb/s
-• slow torrent up threshold: {queueing_slow_torrent_up_threshold} kb/s
+<b>列队状态</b>
+• 最大活动数: 下载 {queueing_max_active_downloads}, 上传 {queueing_max_active_uploads}, \
+全部 {queueing_max_active_torrents}
+• 慢速任务是否计入限制内? {queueing_count_slow_torrents}
+• 下载速度阈值: {queueing_slow_torrent_down_threshold} kb/s
+• 上传速度阈值: {queueing_slow_torrent_up_threshold} kb/s
 
-<b>Share rateo</b>
-• share torrents until max rateo is reached? {max_ratio_enabled} (max rateo: {max_ratio})
-• share torrents until max seeding time is reached? {max_seeding_time_enabled} (max seeding time: {max_seeding_time} minutes, \
-then {max_ratio_act} them)"""
+<b>做种限制</b>
+• 当分享率达到后停止或删除任务? {max_ratio_enabled} (max rateo: {max_ratio})
+• 当做种时间到后停止或删除任务? {max_seeding_time_enabled} (时间: {max_seeding_time} 分钟, \
+停止或删除任务)"""
 
 
 def get_speed_text():
@@ -109,8 +109,8 @@ def on_refresh_button_speed(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
         reply_markup=kb.REFRESH_TRANSFER_INFO
     )
-    update.callback_query.answer('Refreshed')
+    update.callback_query.answer('已刷新')
 
 
-updater.add_handler(CommandHandler(['transferinfo', 'ti', 'speed'], on_speed_command), bot_command=BotCommand("transferinfo", "overview about the current speed, queueing and rateo settings"))
+updater.add_handler(CommandHandler(['transferinfo', 'ti', 'speed'], on_speed_command), bot_command=BotCommand("transferinfo", "显示当前速度、列队状态、做种设置"))
 updater.add_handler(CallbackQueryHandler(on_refresh_button_speed, pattern=r'^refreshtransferinfo$'))

@@ -25,10 +25,10 @@ def on_json_command(update: Update, context: CallbackContext):
     logger.info('qbittirrent request returned %d torrents', len(torrents))
 
     if not torrents:
-        update.message.reply_html('There is no torrent')
+        update.message.reply_html('无种子')
         return
 
-    update.message.reply_text("Sending file, it might take a while...")
+    update.message.reply_text("文件生成中，请稍后...")
 
     result_dict = defaultdict(list)
     for torrent in torrents:
@@ -46,4 +46,4 @@ def on_json_command(update: Update, context: CallbackContext):
     os.remove(file_path)
 
 
-updater.add_handler(CommandHandler('json', on_json_command), bot_command=BotCommand("json", "backup the torrents list"))
+updater.add_handler(CommandHandler('json', on_json_command), bot_command=BotCommand("json", "备份种子列表"))
