@@ -18,19 +18,19 @@ from utils import Permissions
 logger = logging.getLogger(__name__)
 
 QUICK_INFO_TEXT = """• <b>已完成:</b> {completed_count}
-• <b>torrent states:</b> {states_count}
-• <b>categories:</b> {categories_count}
+• <b>任务状态:</b> {states_count}
+• <b>分类:</b> {categories_count}
 
-➤ <b>Active, uploading ({active_up_count}):</b>
+➤ <b>活动中, 上传 ({active_up_count}):</b>
 {active_up}
 
-➤ <b>Active, downloading ({active_down_count}):</b>
+➤ <b>活动中, 下载 ({active_down_count}):</b>
 {active_down}
 
 {current_speed}
 
 {schedule}
-<b>Last refresh:</b> {last_refresh}"""
+<b>刷新时间:</b> {last_refresh}"""
 
 TORRENT_STRING_COMPACT = """• <code>{short_name_escaped}</code> ({progress_pretty}% of {size_pretty}, \
 {share_ratio_rounded}, <b>{generic_speed_pretty}/s</b>) [<a href="{info_deeplink}">info</a>]"""
