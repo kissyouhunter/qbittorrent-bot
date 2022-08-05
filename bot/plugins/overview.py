@@ -107,7 +107,7 @@ def get_quick_info_text(sort_active_by_dl_speed=True):
         active_down='\n'.join(active_torrents_down_strings_list),
         schedule=schedule_string,
         current_speed=current_speed_string,
-        last_refresh=datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        last_refresh=datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
     )
 
     return text
