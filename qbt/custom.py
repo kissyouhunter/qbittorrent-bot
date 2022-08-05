@@ -73,24 +73,24 @@ NEW_ATTRS = {
 
 TORRENT_STRING = """<code>{name_escaped}</code>
   {progress_bar} {progress_pretty}%
-  <b>state</b>: {state_pretty}
-  <b>size</b>: {size_pretty}
-  <b>dl/up speed</b>: {dl_speed_pretty}/s, {up_speed_pretty}/s
-  <b>dl speed limit</b>: {dl_limit_pretty}
-  <b>peers</b>: {peers} connected ({peers_total} in the swarm)
-  <b>seeds</b>: {seeds} connected ({seeds_total} in the swarm)
-  <b>seeds (alternative values)</b>: {num_seeds} connected ({num_complete} in the swarm)
-  <b>leechers</b>: {num_leechs} connected ({num_incomplete} in the swarm)
-  <b>connections</b>: {nb_connections}
-  <b>share ratio</b>: {share_ratio_rounded} (max: {max_ratio})
-  <b>eta</b>: {eta_pretty}
-  <b>elapsed</b>: {time_elapsed_pretty}
-  <b>category</b>: {category}
-  <b>force start</b>: {force_start_pretty}
-  <b>tags</b>: <code>{tags}</code>
-  <b>auto torrent management</b>: {auto_tmm_string}
+  <b>状态</b>: {state_pretty}
+  <b>大小</b>: {size_pretty}
+  <b>下载/上传 速度</b>: {dl_speed_pretty}/s, {up_speed_pretty}/s
+  <b>下载速度限制</b>: {dl_limit_pretty}
+  <b>用户</b>: {peers} connected ({peers_total} in the swarm)
+  <b>种子</b>: {seeds} connected ({seeds_total} in the swarm)
+  <b>种子 (备用值)</b>: {num_seeds} connected ({num_complete} in the swarm)
+  <b>吸血</b>: {num_leechs} connected ({num_incomplete} in the swarm)
+  <b>连接</b>: {nb_connections}
+  <b>分享率</b>: {share_ratio_rounded} (max: {max_ratio})
+  <b>预计时间</b>: {eta_pretty}
+  <b>任务运行时间</b>: {time_elapsed_pretty}
+  <b>分类</b>: {category}
+  <b>强制开始</b>: {force_start_pretty}
+  <b>标签</b>: <code>{tags}</code>
+  <b>种子自动管理</b>: {auto_tmm_string}
   
-  <code>infohash:{hash}</code>
+  <code>hash 值:{hash}</code>
   [<a href="{info_deeplink}">info</a>]"""
 
 
