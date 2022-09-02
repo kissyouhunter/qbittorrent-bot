@@ -4,3 +4,4 @@ toml
 requests
 psutil
 bencoding
+lxml

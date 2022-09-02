@@ -1,25 +1,30 @@
-import logging
-import os
-import sys
-import subprocess
-from config import config
-from telegram.ext import Filters, MessageHandler, CommandHandler, CallbackContext
-import re
-from html import escape
-import hashlib
+try:
+    import logging
+    import os
+    import sys
+    import subprocess
+    from config import config
+    from telegram.ext import Filters, MessageHandler, CommandHandler, CallbackContext
+    import re
+    from html import escape
+    from lxml import etree
+    import hashlib
+    import requests
 
-# noinspection PyPackageRequirements
-from typing import Optional
+    # noinspection PyPackageRequirements
+    from typing import Optional
 
-from telegram import Update, BotCommand, ParseMode, User, Bot
-import bencoding
+    from telegram import Update, BotCommand, ParseMode, User, Bot
+    import bencoding
 
-from bot.qbtinstance import qb
-from bot.updater import updater
-from utils import u
-from utils import kb
-from utils import Permissions
-
+    from bot.qbtinstance import qb
+    from bot.updater import updater
+    from utils import u
+    from utils import kb
+    from utils import Permissions
+except:
+    print('import出错了')
+        
 logger = logging.getLogger(__name__)
 
 def notify_addition(current_chat_id: int, bot: Bot, user: User, torrent_description: str):
