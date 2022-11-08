@@ -1,7 +1,7 @@
-FROM python:3.10.8-alpine3.16
+FROM python:3.8-slim-buster
 ADD . /app
-RUN apk add --no-cache build-base linux-headers \
-    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" >  /etc/timezone \
+RUN apt update && apt install -y gcc \
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && cp -f /app/config.example.toml /app/config.toml \
     && mkdir -p /Downloads \
     && cd /app && pip3 install -r requirements.txt
